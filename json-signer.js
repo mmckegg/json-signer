@@ -1,12 +1,12 @@
 var crypto = require('crypto')  
   
-module.exports = function(permissions, privateKey){
-  return addSignature(permissions, hashObject({privateKey: privateKey, permissions: permissions}))
+module.exports = function(data, privateKey){
+  return addSignature(data, hashObject({privateKey: privateKey, data: data}))
 }
 
-module.exports.check = function(signedPermissions, privateKey){
-  var calculatedSignature = hashObject({privateKey: privateKey, permissions: removeSignature(signedPermissions)})
-  return signedPermissions._signature === calculatedSignature
+module.exports.check = function(signedData, privateKey){
+  var calculatedSignature = hashObject({privateKey: privateKey, data: removeSignature(signedData)})
+  return signedData._signature === calculatedSignature
 }
 
 function hashObject(object){
