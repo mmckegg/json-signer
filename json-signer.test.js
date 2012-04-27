@@ -45,7 +45,7 @@ var presignedPermissions = [
     nested: 
      { x: 1,
        c: [ 1, 2, 3, 4 ] },
-    _signature: 'KONTdPKex6pMUoLL8fHb78RlTueIvRVnC91ANN3h8CE='
+    $signature: 'KONTdPKex6pMUoLL8fHb78RlTueIvRVnC91ANN3h8CE='
   }
 ]
 

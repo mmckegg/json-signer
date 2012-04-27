@@ -6,7 +6,7 @@ module.exports = function(data, privateKey){
 
 module.exports.check = function(signedData, privateKey){
   var calculatedSignature = hashObject({privateKey: privateKey, data: removeSignature(signedData)})
-  return signedData._signature === calculatedSignature
+  return signedData.$signature === calculatedSignature
 }
 
 function hashObject(object){
@@ -50,13 +50,13 @@ function addSignature(permissions, signature){
     result[key] = permissions[key]
     return result
   }, {})
-  result._signature = signature
+  result.$signature = signature
   return result
 }
 
 function removeSignature(signedPermissions){
   return Object.keys(signedPermissions).reduce(function(result, key){
-    if (key !== '_signature'){
+    if (key !== '$signature'){
       result[key] = signedPermissions[key]
     }
     return result
