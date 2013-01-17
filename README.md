@@ -54,7 +54,3 @@ When the matcher is sent back to the server we can verify the signature using `j
   jsonSigner.check(matcherFromClient, privateKey) // => true or false
   
 ```
-
-## Shameless plug
-
-This module was originally written to be used with [JSON Syncer](https://github.com/mmckegg/node-json-syner), a [change stream](https://github.com/mmckegg/node-json-change-stream) [filter based](https://github.com/mmckegg/node-json-change-filter) client/server synchronization module for creating realtime websites.
