@@ -3,10 +3,10 @@
   "name": "json-signer",
   "description": "Signs JSON objects and their keys using a private key (e.g. allowing a server to ensure an object has not been tampered with). Browserify compatible.",
   "version": "0.0.0",
-  "homepage": "http://github.com/mmckegg/node-json-signer",
+  "homepage": "http://github.com/mmckegg/json-signer",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmckegg/node-json-signer.git"
+    "url": "git://github.com/mmckegg/json-signer.git"
   },
   "main": "json-signer",
   "scripts": {
